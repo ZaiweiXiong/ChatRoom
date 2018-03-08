@@ -1,0 +1,42 @@
+<html>
+<head>
+ <title>Chat Room Help</title>
+ <link rel="stylesheet" href="mycss.css"/>
+ <script type="text/javascript" src="jquery.js"></script>
+ <script>
+function myFunction(href) {
+    
+      $("#mydiv").children().remove();
+      
+     if (href.indexOf("#Summary")!==-1){
+          
+        
+        $("#mydiv").append("<p>Summary</p>").append("<p>This document is for chat room help</p>").
+       append("<p>an area on the Internet or other computer network where users can communicate, typically one dedicated to a particular topic.</p>");
+       
+   } else  if (href.indexOf("#Features")!==-1){
+          
+        //alert(href);
+       $("#mydiv").append("<p>Features</p>").append("<p>a. Users can chat with each other</p>").append("<img src="+"chatroom.png "  +" style="+"width:304px;height:228px"+">")
+        .append("<p>b. A user can use drag and drop an image file to the chatroom application.</p>").append("<img src="+"dragAnddrop.png "  +" style="+"width:304px;height:228px"+">")
+        .append("<p>c. A user can send file to specifed user from chat room.</p>").append("<img src="+"sendingfile.png "  +" style="+"width:304px;height:228px"+">");
+
+   }else  if (href.indexOf("#QA")!==-1){
+          
+        
+       $("#mydiv").append("<p>Q and A</p>").append("<p>this is part  for Q and A</p>").append("<p>None</p>");
+       
+   }
+   
+}
+</script>
+</head>
+<body>
+<h1>Chat room help</h1>
+<a href="#Summary"  onclick="myFunction(this.href) ">Summary</a><br>
+<a href="#Features"  onclick="myFunction(this.href) " >Features</a><br>
+<a href="#QA"  onclick="myFunction(this.href) ">QA</a>
+
+<div id="mydiv"></div>
+</body>
+</html>
